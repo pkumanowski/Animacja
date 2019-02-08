@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane onMouseClicked="#paneMouseClicked" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AnimationWindowController">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" spacing="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#playAnimation" text="Play" />
+            <Button mnemonicParsing="false" onAction="#pauseAnimation" text="Pause" />
+            <Button mnemonicParsing="false" onAction="#stopAnimation" text="Stop" />
+            <Button mnemonicParsing="false" onAction="#closeAnimation" text="Close" />
+         </children>
+      </HBox>
+      <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="25.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1f5f9a" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="125.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="100.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1f5f9a" />
+                  <Stop color="#b9ffa3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Circle fx:id="circle" fill="#85565600" layoutX="371.0" layoutY="182.0" radius="100.0" stroke="#3230ab" strokeType="INSIDE" strokeWidth="6.0" visible="false" />
+      <Ellipse fx:id="fishBody" layoutX="215.0" layoutY="434.0" radiusX="104.0" radiusY="37.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#401fff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Ellipse>
+      <QuadCurve fx:id="fishTail" controlX="131.0" controlY="86.5" endX="-10.0" endY="161.5" layoutX="50.0" layoutY="350.0" startX="-10.0" startY="5.5" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#291fff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </QuadCurve>
+      <Circle fx:id="fishEye" fill="DODGERBLUE" layoutX="274.0" layoutY="426.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
